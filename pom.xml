@@ -572,6 +572,13 @@
         <version>${log4j2.version}</version>
         <scope>test</scope>
       </dependency>
+
+      <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-transport-native-kqueue</artifactId>
+        <version>${project.version}</version>
+        <classifier>${os.detected.name}-${os.detected.arch}</classifier>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -604,6 +611,7 @@
       <artifactId>logback-classic</artifactId>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
 
   <build>
